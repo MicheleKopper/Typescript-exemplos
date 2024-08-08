@@ -1,6 +1,7 @@
 console.log('Olá, mundo!');
 
 import { Pessoa } from "./interface/Pessoa";
+import { Cliente } from "./types/Cliente";
 
 //__________ INTERFACE __________
 // Interface possibilita criar moldes para os nossos objetos
