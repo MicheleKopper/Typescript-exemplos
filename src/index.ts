@@ -1,61 +1,40 @@
-// ------ TIPOS DE TYPESCRIPT ------
+console.log('Olá, mundo!');
 
-// STRING
-const nome: string = "Michele Kopper";
+import { Pessoa } from "./interface/Pessoa";
 
-// NUMBERS
-const soma: number = 22;
-
-// BOOLEANS
-const ativo: boolean = true;
-
-// NULL
-const souNull: null = null;
-
-// UNDEFINED
-const naoDefinido: undefined = undefined;
-
-// ARRAYS
-const numeros: number[] = [2, 34, 1, 0];
-
-const listaMercado: Array<string> = ["Tomate", "Cebola"];
-
-const arrayDinamico: (string | number | boolean)[] = ["Sou string", 1, true, 1]; //Os ( ) são necessários quando temos vários tipos + o [ ]
-
-// OBJECT
-const objetoVazio: object = {}; //Não controla os tipos de dados dentro do objeto
-
-const pessoa: object = {
-    nome: "Michele Kopper",
-    cpf: "1232130-1203",
-};
-
-// VOID - Não gera retorno (return)
-function printar(): void {
-    console.log("Olá mundo!");
-}
-
-// RETORNO (RETURN) BOOLEAN - Precisa apresentar o true e false
-function maioridade(idade: number): boolean {
-    if (idade >= 18) {
-      return true;
-    }
-    return false;
-  }
-
-// INTERFACE - nome em PascalCase (1° letra maiúscula), não precisa de vírgula
-//Declarando minha interface
-interface Pessoa {
-    nome: string
-    cpf: string
-}
-
-// Criando minha variável com o tipo da interface
+//__________ INTERFACE __________
+// Interface possibilita criar moldes para os nossos objetos
 const michele: Pessoa = {
     nome: "Michele Kopper",
-    cpf: "12345-678"
+    passaporte: 123,
+    email: "michelekopper@gmail.com",
+    senha: "senha123"
 }
 
-// ? torna o item não obrigaório
+function criarPessoa(pessoa: Pessoa): void {
+    console.log('Criando pessoa...');
+    console.log(pessoa);
+}
 
-  
+criarPessoa(michele)
+
+
+// ARQUIVO CLIENTE.TS
+
+function mostrarCliente(cliente: Cliente): void {
+    console.log(`O cliente é: ${cliente.nome}`);
+    console.log(`O telefone do cliente é: ${cliente.telefone}`);
+}
+
+// const cliente = {
+//     nome: "Theodoro Kopper",
+//     telefone: "123.456"
+// }
+
+const cliente: Cliente = {
+    nome: "Theodoro Kopper",
+    telefone: 123.456,
+    setor: "móveis"
+}
+
+mostrarCliente(cliente)
