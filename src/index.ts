@@ -1,7 +1,9 @@
 import { Casa } from "./class/Casa";
 import { Cliente } from "./class/Cliente";
 import { ContaBancaria, CriarConta } from "./class/ContaBancaria";
+import { Leao } from "./class/Leao";
 import { Pessoa } from "./interface/Pessoa";
+import { Animal } from "./class/Animal";
 // import { Cliente } from "./types/Cliente";
 
 //__________ INTERFACE __________
@@ -144,4 +146,16 @@ conta01.depositar(500)
 
 console.log(conta01.mostrarConta());
 
+
+
+// ARQUIVO LEAO.TS
+const animal = new Animal ('Rei Leão', 'Felino', 'Caramelo', 5, 25, 1)
+
+
+
+const reiLeao = new Leao('Rei Leão', 'Felino', 'Caramelo', 5, 50, 1, 'Pelagem boa')
+
+reiLeao.dormir()
+reiLeao.comer()
+reiLeao.emitirSom()
 
